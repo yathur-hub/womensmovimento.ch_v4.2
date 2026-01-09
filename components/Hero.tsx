@@ -23,43 +23,45 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
   };
 
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-[#f6e4b9]">
+    <section className="relative min-h-[85vh] md:min-h-[90vh] flex items-center pt-24 pb-12 overflow-hidden bg-[#f6e4b9]">
       {/* Decorative Elements */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-[#f8f8f8] -skew-x-12 transform translate-x-1/4 z-0 hidden lg:block" />
       
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div className="max-w-2xl">
-          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white border border-[#C49E85] text-[#C49E85] text-xs font-bold uppercase tracking-widest mb-6">
+        <div className="max-w-2xl text-center lg:text-left">
+          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white border border-[#C49E85] text-[#C49E85] text-[10px] md:text-xs font-bold uppercase tracking-widest mb-6">
             <span className="w-2 h-2 rounded-full bg-[#C49E85]"></span>
             <span>Krankenkassenanerkannt</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-light mb-6 leading-tight text-[#121212]">
-            Willkommen bei <br />
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-light mb-6 leading-[1.1] text-[#121212]">
+            Willkommen bei <br className="hidden sm:block" />
             <span className="italic font-normal">Women’s Movimento</span>
           </h1>
           
-          <p className="text-xl md:text-2xl font-light text-[#121212] mb-4">
+          <p className="text-lg md:text-2xl font-light text-[#121212] mb-4">
             Dein Ort für innovative Frauenfitness, echte Gemeinschaft und neue Energie.
           </p>
           
-          <p className="text-base md:text-lg text-[#121212]/80 mb-10 leading-relaxed max-w-xl">
+          <p className="text-sm md:text-lg text-[#121212]/80 mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0">
             Women’s Movimento steht für einzigartige Sportkonzepte, inspirierende Events, Retreats und qualifizierte Weiterbildungen – speziell für Frauen. 
-            Hier stärkst du Körper und Geist, lädst deine Energie auf und wirst Teil einer Community, die dich trägt.
+            Hier stärkst du Körper und Geist und wirst Teil einer Community, die dich trägt.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Button 
-              label="Jetzt Mitglied werden" 
+              label="Mitglied werden" 
               variant="primary" 
               href="#mitgliedschaften" 
               onClick={scrollToMemberships}
+              className="text-xs tracking-widest"
             />
             <Button 
-              label="Team" 
+              label="Unser Team" 
               variant="secondary" 
               href="/team" 
               onClick={handleTeamClick}
+              className="text-xs tracking-widest"
             />
           </div>
         </div>
